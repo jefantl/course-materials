@@ -1,0 +1,41 @@
+GET http://127.0.0.1:8080/api-status
+API is up and running
+
+POST http://127.0.0.1:8080/assignment?id=ethan&title=hi&desc=aother assingment&points=5
+
+PUT http://127.0.0.1:8080/assignments/ethan?id=ethan&points=7
+{
+    "id": "ethan",
+    "Title": "hi",
+    "desc": "aother assingment",
+    "points": 7
+}
+
+GET http://127.0.0.1:8080/assignment/ethan
+{
+    "id": "ethan",
+    "Title": "hi",
+    "desc": "aother assingment",
+    "points": 7
+}
+
+GET http://127.0.0.1:8080/assignments
+{
+    "assignments": [
+        {
+            "id": "Mike1A",
+            "Title": "Lab 4 ",
+            "desc": "Some lab this guy made yesteday?",
+            "points": 20
+        },
+        {
+            "id": "ethan",
+            "Title": "hi",
+            "desc": "aother assingment",
+            "points": 7
+        }
+    ]
+}
+
+DELETE http://127.0.0.1:8080/assignment/ethan
+{"status":"Success"}
